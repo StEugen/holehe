@@ -7,7 +7,7 @@ RUN apt-get update \
 RUN pip install --no-cache-dir "httpx[http2]>=0.23.3"
 COPY . /opt/holehe
 WORKDIR /opt/holehe
-
+RUN pip install requests
 RUN pip install --no-cache-dir .
 
 ENTRYPOINT ["holehe"]
